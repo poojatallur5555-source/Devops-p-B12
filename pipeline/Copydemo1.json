@@ -27,15 +27,23 @@
 						}
 					},
 					"sink": {
-						"type": "JsonSink",
+						"type": "ParquetSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "JsonWriteSettings"
+							"type": "ParquetWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -45,10 +53,49 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Delete1",
+				"type": "Delete",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage2",
+							"type": "LinkedServiceReference"
+						},
+						"path": "input"
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					}
+				}
 			}
 		],
 		"annotations": []
