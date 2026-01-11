@@ -1,0 +1,9 @@
+{
+	"name": "Azureprojectsdemo",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2ae462d8-891b-400c-8a66-1522d98b0a80",
+		"tenantId": "5a00b53d-72ad-47d9-94d6-72fd1aa4953b"
+	}
+}
