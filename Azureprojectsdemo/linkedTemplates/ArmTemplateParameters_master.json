@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Azureprojectsdemo"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://azuregithub123.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://azurreeee.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://azureprojectdemoo1.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://azureprojectdemoo1.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "azureprojectsdemo1.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "azureprojects1"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "admin1"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"HttpServer2_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"HttpServer3_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"HttpServer4_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"HttpServer5_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
