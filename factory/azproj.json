@@ -1,0 +1,9 @@
+{
+	"name": "azproj",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "057606c2-47c5-45c6-93cc-3369e0f145f5",
+		"tenantId": "5a00b53d-72ad-47d9-94d6-72fd1aa4953b"
+	}
+}
